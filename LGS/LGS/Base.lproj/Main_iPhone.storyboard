@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--processing-->
+        <scene sceneID="iyH-ei-LMS">
+            <objects>
+                <viewController id="Rsf-WK-zGR" customClass="ETN_processing" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AQm-FK-DJf"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Ec-Wz-jUf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cm3-hK-f8A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9j2-qP-h0N">
+                                <rect key="frame" x="0.0" y="15" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="ETN Infrasound Processing" id="yrY-EA-p6h">
+                                        <barButtonItem key="rightBarButtonItem" title="ETN" id="2SC-u1-dnw">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="flipHorizontal" id="5CC-ef-Mth"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kks-kz-tZe">
+                                <rect key="frame" x="0.0" y="78" width="320" height="490"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9j2-qP-h0N" firstAttribute="top" secondItem="cm3-hK-f8A" secondAttribute="top" constant="15" id="8cF-5X-1cG"/>
+                            <constraint firstItem="kks-kz-tZe" firstAttribute="trailing" secondItem="9j2-qP-h0N" secondAttribute="trailing" id="KWE-qo-VAZ"/>
+                            <constraint firstItem="kks-kz-tZe" firstAttribute="top" secondItem="9j2-qP-h0N" secondAttribute="bottom" constant="19" id="KhN-8Q-aug"/>
+                            <constraint firstItem="kks-kz-tZe" firstAttribute="leading" secondItem="9j2-qP-h0N" secondAttribute="leading" id="LLQ-dP-UDK"/>
+                            <constraint firstItem="kks-kz-tZe" firstAttribute="leading" secondItem="cm3-hK-f8A" secondAttribute="leading" id="fSd-wa-PSj"/>
+                            <constraint firstAttribute="bottom" secondItem="kks-kz-tZe" secondAttribute="bottom" id="guG-3T-rgX"/>
+                            <constraint firstAttribute="trailing" secondItem="kks-kz-tZe" secondAttribute="trailing" id="jcV-dv-TqU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ETNProc_vista" destination="kks-kz-tZe" id="uW4-1H-SqU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wJ-Qq-PJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-739" y="50"/>
+        </scene>
+        <!--Com luca innocenti View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="com_luca_innocentiViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-Zd-RM2">
+                                <rect key="frame" x="0.0" y="72" width="320" height="449"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.94999999999999996" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="RZ8-7T-Ohd">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Sens.1" id="Xqs-KI-LW4">
+                                        <connections>
+                                            <action selector="Sens1:" destination="vXZ-lx-hvc" id="n1W-Vl-mtf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jcM-Uv-wV1"/>
+                                    <barButtonItem title="Sens.2" id="rfw-b4-OsU">
+                                        <connections>
+                                            <action selector="Sens2:" destination="vXZ-lx-hvc" id="Awq-7B-US1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="M9Q-NV-YDc"/>
+                                    <barButtonItem title="Sens.3" id="BFH-vJ-FA1">
+                                        <connections>
+                                            <action selector="Sens3:" destination="vXZ-lx-hvc" id="3h1-XP-fbO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SL1-GJ-xPg"/>
+                                    <barButtonItem title="Sens.4" id="zao-Dy-AOH">
+                                        <connections>
+                                            <action selector="Sens4:" destination="vXZ-lx-hvc" id="XUh-kG-N5I"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WLw-Ih-Dvt">
+                                <rect key="frame" x="150" y="264" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wnT-Ih-spL">
+                                <rect key="frame" x="0.0" y="17" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="ETN" id="g9r-lO-CqV">
+                                        <barButtonItem key="leftBarButtonItem" title="ETN Proc." id="2oT-ca-cuE">
+                                            <connections>
+                                                <segue destination="Rsf-WK-zGR" kind="modal" modalTransitionStyle="flipHorizontal" id="KTw-VW-akj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="MVT" id="oo4-3C-19e">
+                                            <connections>
+                                                <segue destination="R5j-Cb-LLz" kind="modal" modalTransitionStyle="flipHorizontal" id="3fa-sm-s73"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RZ8-7T-Ohd" secondAttribute="trailing" id="1a9-MW-1Fb"/>
+                            <constraint firstItem="RZ8-7T-Ohd" firstAttribute="trailing" secondItem="Gpe-Zd-RM2" secondAttribute="trailing" id="2h9-WA-fKL"/>
+                            <constraint firstItem="RZ8-7T-Ohd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="2ob-62-uO9"/>
+                            <constraint firstItem="RZ8-7T-Ohd" firstAttribute="trailing" secondItem="wnT-Ih-spL" secondAttribute="trailing" id="9mX-Q7-VaP"/>
+                            <constraint firstItem="RZ8-7T-Ohd" firstAttribute="leading" secondItem="Gpe-Zd-RM2" secondAttribute="leading" id="BQx-cC-RLY"/>
+                            <constraint firstItem="RZ8-7T-Ohd" firstAttribute="leading" secondItem="wnT-Ih-spL" secondAttribute="leading" id="Pkd-zF-ILh"/>
+                            <constraint firstItem="Gpe-Zd-RM2" firstAttribute="centerX" secondItem="WLw-Ih-Dvt" secondAttribute="centerX" id="SbF-bj-GSp"/>
+                            <constraint firstItem="Gpe-Zd-RM2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="72" id="ayd-pr-L78"/>
+                            <constraint firstItem="WLw-Ih-Dvt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="264" id="geM-cZ-qdH"/>
+                            <constraint firstAttribute="bottom" secondItem="RZ8-7T-Ohd" secondAttribute="bottom" id="k4T-mw-zbc"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="Vista" destination="Gpe-Zd-RM2" id="Dfl-oh-CZr"/>
+                        <outlet property="spinner" destination="WLw-Ih-Dvt" id="Irw-ca-i0O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-286" y="50"/>
+        </scene>
+        <!--Secondview View Controller-->
+        <scene sceneID="1QC-8O-xp7">
+            <objects>
+                <viewController id="R5j-Cb-LLz" customClass="secondviewViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wh6-vx-26K"/>
+                        <viewControllerLayoutGuide type="bottom" id="qw6-dT-UFL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2fU-3k-SUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jh4-9P-0MY">
+                                <rect key="frame" x="0.0" y="16" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="MVT" id="siI-aB-zM0">
+                                        <barButtonItem key="leftBarButtonItem" title="ETN" id="6J9-Rv-iET">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="flipHorizontal" id="7NQ-jn-gUA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="MVT Proc." id="06m-jQ-Aar">
+                                            <connections>
+                                                <segue destination="iPd-J9-KfH" kind="modal" modalTransitionStyle="flipHorizontal" id="H1I-xj-AYJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLa-6H-LMw">
+                                <rect key="frame" x="0.0" y="180" width="320" height="313"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="iRk-g5-ehN"/>
+                                </constraints>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-w3-0K9">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Sens.1" id="qRN-fw-bqh">
+                                        <connections>
+                                            <action selector="sens1:" destination="R5j-Cb-LLz" id="Lh6-YG-TVf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="a8u-Sf-tjR"/>
+                                    <barButtonItem title="Sens.2" id="Y2q-Qt-DzO">
+                                        <connections>
+                                            <action selector="sens2:" destination="R5j-Cb-LLz" id="rtb-1K-rGd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KBt-yL-MTh"/>
+                                    <barButtonItem title="Sens.3" id="I4c-0x-ABA">
+                                        <connections>
+                                            <action selector="sens3:" destination="R5j-Cb-LLz" id="Iu7-sx-Ghd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WPS-we-xsM"/>
+                                    <barButtonItem title="Sens.4" id="MIR-87-rRY">
+                                        <connections>
+                                            <action selector="sens4:" destination="R5j-Cb-LLz" id="ERX-yl-iqm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jh4-9P-0MY" firstAttribute="top" secondItem="2fU-3k-SUQ" secondAttribute="top" constant="16" id="3rc-ty-GQf"/>
+                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="leading" secondItem="lLa-6H-LMw" secondAttribute="leading" id="4Ot-QB-b4u"/>
+                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="trailing" secondItem="Jh4-9P-0MY" secondAttribute="trailing" id="6uV-UM-QBX"/>
+                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="leading" secondItem="Jh4-9P-0MY" secondAttribute="leading" id="Bm8-zb-srF"/>
+                            <constraint firstAttribute="bottom" secondItem="Ehh-w3-0K9" secondAttribute="bottom" id="JZH-Gq-u9T"/>
+                            <constraint firstAttribute="trailing" secondItem="Ehh-w3-0K9" secondAttribute="trailing" id="QLm-Na-cen"/>
+                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="trailing" secondItem="lLa-6H-LMw" secondAttribute="trailing" id="f8h-fh-VFs"/>
+                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="top" secondItem="lLa-6H-LMw" secondAttribute="bottom" constant="31" id="fmW-qg-B2u"/>
+                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="leading" secondItem="2fU-3k-SUQ" secondAttribute="leading" id="wW1-cL-Hyd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Vista2" destination="lLa-6H-LMw" id="8MG-Mg-OnE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2H-Nc-C88" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="40"/>
+        </scene>
+        <!--processing-->
+        <scene sceneID="GYj-h8-w8r">
+            <objects>
+                <viewController id="iPd-J9-KfH" customClass="MVT_processing" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Zw-Db-518"/>
+                        <viewControllerLayoutGuide type="bottom" id="6es-lb-ex8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ela-iZ-xgW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Kh-N8-YUJ">
+                                <rect key="frame" x="0.0" y="17" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="MVT Infrasound Processing" id="hee-LY-xek">
+                                        <barButtonItem key="leftBarButtonItem" title="MVT" id="YEO-ve-Avz">
+                                            <connections>
+                                                <segue destination="R5j-Cb-LLz" kind="modal" modalTransitionStyle="flipHorizontal" id="58d-MQ-9xR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q7q-qh-8Az" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="40"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="7NQ-jn-gUA"/>
+        <segue reference="58d-MQ-9xR"/>
+    </inferredMetricsTieBreakers>
+</document>
