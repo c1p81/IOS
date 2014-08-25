@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8103524219A62A7F00BCFAE0 /* secondviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8103524119A62A7F00BCFAE0 /* secondviewViewController.m */; };
+		816642C019AB1F900065F875 /* ricerca.m in Sources */ = {isa = PBXBuildFile; fileRef = 816642BF19AB1F900065F875 /* ricerca.m */; };
+		816642C319AB2B0B0065F875 /* archivio.m in Sources */ = {isa = PBXBuildFile; fileRef = 816642C219AB2B0B0065F875 /* archivio.m */; };
 		8175AEA5199FB1B000C35E20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8175AEA4199FB1B000C35E20 /* Foundation.framework */; };
 		8175AEA7199FB1B000C35E20 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8175AEA6199FB1B000C35E20 /* CoreGraphics.framework */; };
 		8175AEA9199FB1B000C35E20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8175AEA8199FB1B000C35E20 /* UIKit.framework */; };
@@ -40,6 +42,10 @@
 /* Begin PBXFileReference section */
 		8103524019A62A7F00BCFAE0 /* secondviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secondviewViewController.h; sourceTree = "<group>"; };
 		8103524119A62A7F00BCFAE0 /* secondviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = secondviewViewController.m; sourceTree = "<group>"; };
+		816642BE19AB1F900065F875 /* ricerca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ricerca.h; sourceTree = "<group>"; };
+		816642BF19AB1F900065F875 /* ricerca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ricerca.m; sourceTree = "<group>"; };
+		816642C119AB2B0B0065F875 /* archivio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = archivio.h; sourceTree = "<group>"; };
+		816642C219AB2B0B0065F875 /* archivio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = archivio.m; sourceTree = "<group>"; };
 		8175AEA1199FB1B000C35E20 /* LGS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LGS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8175AEA4199FB1B000C35E20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8175AEA6199FB1B000C35E20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +132,10 @@
 				8175AEB3199FB1B000C35E20 /* com_luca_innocentiAppDelegate.h */,
 				8175AEB4199FB1B000C35E20 /* com_luca_innocentiAppDelegate.m */,
 				8175AEB6199FB1B000C35E20 /* Main_iPhone.storyboard */,
+				816642C119AB2B0B0065F875 /* archivio.h */,
+				816642C219AB2B0B0065F875 /* archivio.m */,
+				816642BE19AB1F900065F875 /* ricerca.h */,
+				816642BF19AB1F900065F875 /* ricerca.m */,
 				8175AEB9199FB1B000C35E20 /* Main_iPad.storyboard */,
 				8175AEBC199FB1B000C35E20 /* com_luca_innocentiViewController.h */,
 				8175AEBD199FB1B000C35E20 /* com_luca_innocentiViewController.m */,
@@ -274,7 +284,9 @@
 			files = (
 				8175AEB1199FB1B000C35E20 /* main.m in Sources */,
 				81CB70F919A7469900FA3F23 /* ETN_processing.m in Sources */,
+				816642C319AB2B0B0065F875 /* archivio.m in Sources */,
 				81CB70FC19A748D700FA3F23 /* MVT_processing.m in Sources */,
+				816642C019AB1F900065F875 /* ricerca.m in Sources */,
 				8175AEBE199FB1B000C35E20 /* com_luca_innocentiViewController.m in Sources */,
 				8175AEB5199FB1B000C35E20 /* com_luca_innocentiAppDelegate.m in Sources */,
 				8103524219A62A7F00BCFAE0 /* secondviewViewController.m in Sources */,

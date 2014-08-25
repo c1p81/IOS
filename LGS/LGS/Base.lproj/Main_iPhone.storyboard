@@ -4,6 +4,182 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Archivio-->
+        <scene sceneID="3qz-eF-JgX">
+            <objects>
+                <viewController id="gkS-2l-D1J" customClass="archivio" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="42K-hd-KCs"/>
+                        <viewControllerLayoutGuide type="bottom" id="daJ-AB-haL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IR0-Wt-wlg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHL-xn-wDO">
+                                <rect key="frame" x="0.0" y="12" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Archivio" id="TE9-gw-P9d">
+                                        <barButtonItem key="leftBarButtonItem" title="?" id="qDB-y2-YrJ">
+                                            <connections>
+                                                <action selector="help:" destination="gkS-2l-D1J" id="wrL-E2-rIS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title=">>" id="EbM-du-cX4">
+                                            <connections>
+                                                <segue destination="zRw-ny-PEH" kind="modal" modalTransitionStyle="flipHorizontal" id="BRi-Tk-ddq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NK2-Pd-yja">
+                                <rect key="frame" x="0.0" y="77" width="320" height="413"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYB-G5-56q">
+                                <rect key="frame" x="0.0" y="511" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="00-06" id="DzT-sj-f4a">
+                                        <connections>
+                                            <action selector="primo:" destination="gkS-2l-D1J" id="Nqb-HB-T5x"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JGs-Kk-V92"/>
+                                    <barButtonItem title="06-12" id="3OW-bA-TEK">
+                                        <connections>
+                                            <action selector="secondo:" destination="gkS-2l-D1J" id="ygj-Oy-Qqf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="OeS-Fi-e29"/>
+                                    <barButtonItem title="12-18" id="SQk-ii-kYz">
+                                        <connections>
+                                            <action selector="terzo:" destination="gkS-2l-D1J" id="7Xe-ZQ-Rrt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kik-0B-Gsq"/>
+                                    <barButtonItem title="18-24" id="Ih3-46-lXG">
+                                        <connections>
+                                            <action selector="quarto:" destination="gkS-2l-D1J" id="fns-xb-GZB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="daJ-AB-haL" firstAttribute="top" secondItem="yYB-G5-56q" secondAttribute="bottom" constant="13" id="3aG-lh-8bb"/>
+                            <constraint firstItem="NK2-Pd-yja" firstAttribute="leading" secondItem="iHL-xn-wDO" secondAttribute="leading" id="CqS-gm-mqC"/>
+                            <constraint firstItem="iHL-xn-wDO" firstAttribute="leading" secondItem="IR0-Wt-wlg" secondAttribute="leading" id="DXJ-Xv-gBk"/>
+                            <constraint firstItem="NK2-Pd-yja" firstAttribute="leading" secondItem="yYB-G5-56q" secondAttribute="leading" id="OxF-on-o6V"/>
+                            <constraint firstItem="iHL-xn-wDO" firstAttribute="top" secondItem="IR0-Wt-wlg" secondAttribute="top" constant="12" id="XWK-Kj-iru"/>
+                            <constraint firstItem="NK2-Pd-yja" firstAttribute="trailing" secondItem="iHL-xn-wDO" secondAttribute="trailing" id="fRy-yi-VjV"/>
+                            <constraint firstAttribute="trailing" secondItem="NK2-Pd-yja" secondAttribute="trailing" id="ivE-xM-y3G"/>
+                            <constraint firstItem="NK2-Pd-yja" firstAttribute="top" secondItem="iHL-xn-wDO" secondAttribute="bottom" constant="21" id="lsa-OD-IsM"/>
+                            <constraint firstItem="yYB-G5-56q" firstAttribute="trailing" secondItem="NK2-Pd-yja" secondAttribute="trailing" id="lu8-AB-mF7"/>
+                            <constraint firstItem="yYB-G5-56q" firstAttribute="top" secondItem="NK2-Pd-yja" secondAttribute="bottom" constant="21" id="tU3-f0-RXK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="risultato_ricerca" destination="NK2-Pd-yja" id="XN3-jt-uow"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XvW-vH-hLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1599" y="50"/>
+        </scene>
+        <!--Ricerca-->
+        <scene sceneID="75v-p4-YWX">
+            <objects>
+                <viewController id="zRw-ny-PEH" customClass="ricerca" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aI3-yh-4lq"/>
+                        <viewControllerLayoutGuide type="bottom" id="emk-DZ-8LM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oRx-AE-RTY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpR-IW-Rfi">
+                                <rect key="frame" x="134" y="498" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ricerca">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ricerca:" destination="zRw-ny-PEH" eventType="touchUpInside" id="xvV-Zp-idP"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VU2-bW-BP0">
+                                <rect key="frame" x="0.0" y="12" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Ricerca archivio" id="Rgc-fs-kc9">
+                                        <barButtonItem key="rightBarButtonItem" title="ETN Proc." id="goF-kv-jjA">
+                                            <connections>
+                                                <segue destination="Rsf-WK-zGR" kind="modal" modalTransitionStyle="flipHorizontal" id="Xlg-s1-40t"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-88-H9S">
+                                <rect key="frame" x="0.0" y="56" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="430647597.10634297">
+                                    <!--2014-08-25 08:19:57 +0000-->
+                                </date>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                                </timeZone>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDq-ab-Bmv">
+                                <rect key="frame" x="0.0" y="315" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UDq-ab-Bmv" firstAttribute="leading" secondItem="oRx-AE-RTY" secondAttribute="leading" id="9JD-KS-b4I"/>
+                            <constraint firstAttribute="bottom" secondItem="UDq-ab-Bmv" secondAttribute="bottom" constant="91" id="Ngv-AL-ulW"/>
+                            <constraint firstItem="hpR-IW-Rfi" firstAttribute="centerX" secondItem="UDq-ab-Bmv" secondAttribute="centerX" id="Yov-YP-pWA"/>
+                            <constraint firstItem="hpR-IW-Rfi" firstAttribute="centerX" secondItem="oRx-AE-RTY" secondAttribute="centerX" id="bY2-OE-Alr"/>
+                            <constraint firstItem="UDq-ab-Bmv" firstAttribute="trailing" secondItem="VU2-bW-BP0" secondAttribute="trailing" id="cSz-ED-jB7"/>
+                            <constraint firstItem="emk-DZ-8LM" firstAttribute="top" secondItem="hpR-IW-Rfi" secondAttribute="bottom" constant="40" id="nuS-ds-egB"/>
+                            <constraint firstItem="UDq-ab-Bmv" firstAttribute="leading" secondItem="VU2-bW-BP0" secondAttribute="leading" id="orJ-mz-vEz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datap" destination="tZM-88-H9S" id="uCr-T0-ssZ"/>
+                        <outlet property="sensore" destination="UDq-ab-Bmv" id="jOm-uu-n5B"/>
+                        <segue destination="gkS-2l-D1J" kind="modal" identifier="risultato" modalTransitionStyle="flipHorizontal" id="pKf-Tb-T7R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gyx-Bf-0X3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1194" y="50"/>
+        </scene>
         <!--processing-->
         <scene sceneID="iyH-ei-LMS">
             <objects>
@@ -21,6 +197,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="ETN Infrasound Processing" id="yrY-EA-p6h">
+                                        <barButtonItem key="leftBarButtonItem" title="Arch" id="QdC-CS-DB8">
+                                            <connections>
+                                                <segue destination="zRw-ny-PEH" kind="modal" modalTransitionStyle="flipHorizontal" id="9mo-oI-JmS"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="ETN" id="2SC-u1-dnw">
                                             <connections>
                                                 <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="flipHorizontal" id="5CC-ef-Mth"/>
@@ -66,8 +247,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-Zd-RM2">
-                                <rect key="frame" x="0.0" y="72" width="320" height="449"/>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-Zd-RM2">
+                                <rect key="frame" x="0.0" y="72" width="320" height="403"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -106,7 +287,7 @@
                                 <rect key="frame" x="150" y="264" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wnT-Ih-spL">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wnT-Ih-spL">
                                 <rect key="frame" x="0.0" y="17" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
@@ -134,9 +315,11 @@
                             <constraint firstItem="RZ8-7T-Ohd" firstAttribute="leading" secondItem="Gpe-Zd-RM2" secondAttribute="leading" id="BQx-cC-RLY"/>
                             <constraint firstItem="RZ8-7T-Ohd" firstAttribute="leading" secondItem="wnT-Ih-spL" secondAttribute="leading" id="Pkd-zF-ILh"/>
                             <constraint firstItem="Gpe-Zd-RM2" firstAttribute="centerX" secondItem="WLw-Ih-Dvt" secondAttribute="centerX" id="SbF-bj-GSp"/>
+                            <constraint firstItem="Gpe-Zd-RM2" firstAttribute="top" secondItem="wnT-Ih-spL" secondAttribute="bottom" constant="11" id="Vo9-Co-9f9"/>
                             <constraint firstItem="Gpe-Zd-RM2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="72" id="ayd-pr-L78"/>
                             <constraint firstItem="WLw-Ih-Dvt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="264" id="geM-cZ-qdH"/>
                             <constraint firstAttribute="bottom" secondItem="RZ8-7T-Ohd" secondAttribute="bottom" id="k4T-mw-zbc"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Gpe-Zd-RM2" secondAttribute="bottom" constant="49" id="obz-XZ-GEU"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -181,11 +364,11 @@
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLa-6H-LMw">
-                                <rect key="frame" x="0.0" y="180" width="320" height="313"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="392"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="313" id="iRk-g5-ehN"/>
+                                    <constraint firstAttribute="height" constant="392" id="dNg-f7-bQH"/>
                                 </constraints>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-w3-0K9">
@@ -220,15 +403,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jh4-9P-0MY" firstAttribute="top" secondItem="2fU-3k-SUQ" secondAttribute="top" constant="16" id="3rc-ty-GQf"/>
-                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="leading" secondItem="lLa-6H-LMw" secondAttribute="leading" id="4Ot-QB-b4u"/>
-                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="trailing" secondItem="Jh4-9P-0MY" secondAttribute="trailing" id="6uV-UM-QBX"/>
-                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="leading" secondItem="Jh4-9P-0MY" secondAttribute="leading" id="Bm8-zb-srF"/>
-                            <constraint firstAttribute="bottom" secondItem="Ehh-w3-0K9" secondAttribute="bottom" id="JZH-Gq-u9T"/>
-                            <constraint firstAttribute="trailing" secondItem="Ehh-w3-0K9" secondAttribute="trailing" id="QLm-Na-cen"/>
-                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="trailing" secondItem="lLa-6H-LMw" secondAttribute="trailing" id="f8h-fh-VFs"/>
-                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="top" secondItem="lLa-6H-LMw" secondAttribute="bottom" constant="31" id="fmW-qg-B2u"/>
-                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="leading" secondItem="2fU-3k-SUQ" secondAttribute="leading" id="wW1-cL-Hyd"/>
+                            <constraint firstItem="lLa-6H-LMw" firstAttribute="top" secondItem="Jh4-9P-0MY" secondAttribute="bottom" constant="12" id="35b-hR-Fgu"/>
+                            <constraint firstAttribute="bottom" secondItem="Ehh-w3-0K9" secondAttribute="bottom" id="HkE-Qx-DT0"/>
+                            <constraint firstItem="lLa-6H-LMw" firstAttribute="trailing" secondItem="Jh4-9P-0MY" secondAttribute="trailing" id="L0x-Hb-9NH"/>
+                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="trailing" secondItem="lLa-6H-LMw" secondAttribute="trailing" id="PSj-pw-jeD"/>
+                            <constraint firstItem="Ehh-w3-0K9" firstAttribute="leading" secondItem="lLa-6H-LMw" secondAttribute="leading" id="b9I-v8-AO1"/>
+                            <constraint firstItem="lLa-6H-LMw" firstAttribute="leading" secondItem="2fU-3k-SUQ" secondAttribute="leading" id="cGr-Fd-DRs"/>
+                            <constraint firstItem="lLa-6H-LMw" firstAttribute="top" secondItem="2fU-3k-SUQ" secondAttribute="top" constant="72" id="h2U-xz-6Mv"/>
+                            <constraint firstItem="lLa-6H-LMw" firstAttribute="leading" secondItem="Jh4-9P-0MY" secondAttribute="leading" id="jjV-wo-fsb"/>
+                            <constraint firstAttribute="trailing" secondItem="lLa-6H-LMw" secondAttribute="trailing" id="woG-Wr-Wo7"/>
                         </constraints>
                     </view>
                     <connections>
@@ -279,7 +462,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="3fa-sm-s73"/>
         <segue reference="7NQ-jn-gUA"/>
-        <segue reference="58d-MQ-9xR"/>
+        <segue reference="Xlg-s1-40t"/>
+        <segue reference="BRi-Tk-ddq"/>
     </inferredMetricsTieBreakers>
 </document>
